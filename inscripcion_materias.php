@@ -1,44 +1,42 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
 
 
     <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >
+
+
 
 	<title>Inscripcion a Materias</title>
 
 
-	<style type="text/css">
-		
-		.normal {
-  width: 1024px;
-  border: 1px solid #000;
-}
-.normal th, .normal td {
-  border: 1px solid #000;
-}
-	</style>
 
 </head>
 <body>
 
+<div class="container">
 
  
-<table class="normal" summary="Tabla genérica">
+<table class="table">
+  <thead class="thead-dark">
 	<tr>
-		<td>NRO</td>
-		<td>PROFESOR</td>
-		<td>NOMBRE MATERIA </td>
-		<td>AÑO</td>
-		<td>FOMRATO</td>
-		<td>REGIMEN </td>
-		<td>INSCRIBIR</td>
+	
+
+		 <th scope="col">#NRO</th>
+      
+      <th scope="col">NOMBRE MATERIA</th>
+      <th scope="col">AÑO</th>
+       <th scope="col">FORMATO</th>
+      <th scope="col">REGIMEN</th>
+      <th scope="col">INSCRIBIR</th>
+      
 
 
 	</tr>
-
-
+   </thead>
+   <tbody>
 	<?php 
 
 
@@ -64,13 +62,13 @@ $cadena.="<tr>";
   while( $datos = $sql->fetch(PDO::FETCH_ASSOC)){
 
 
-  	$cadena.="<td>".$datos['id_catedra']."</td> 
-  	 <td>".$datos['nombre_y_apellido']."</td>
+  	$cadena.="<th scope='row'>".$datos['id_catedra']."</th> 
+  	 
   	 <td>".$datos['nombre']."</td>
   	 <td>".$datos['ano']."</td>
   	 <td>".$datos['formato']."</td>	
   	 <td>".$datos['regimen_c']."</td>
-  	 <td><button onclick='inscribir(".$id_alumno.",".$datos['id_catedra'].")'>Aqui</button></td>";
+  	 <td><button class='btn btn-outline-primary' onclick='inscribir(".$id_alumno.",".$datos['id_catedra'].")'>Aqui</button></td>";
   	
 
 $cadena.="</tr>";
@@ -87,12 +85,12 @@ echo $cadena;
 
  ?>
 
-
+</tbody>
 </table>
 
 
 
-
+</div>
 
 </body>
 
