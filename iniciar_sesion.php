@@ -26,7 +26,7 @@ try {
       $contador = $estado->rowCount();
       if($contador > 0) {
         $_SESSION['dni'] = $_POST['dni'];
-        header("location:login_exitoso.php");
+        header("location:pagina_principal.php");
         // $mensaje = '<label>Has iniciado sesión</label>';
       }
       else {
