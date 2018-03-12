@@ -35,7 +35,8 @@ try {
     }
   }
 
-} catch (PDOException $e) {
+}
+catch (PDOException $e) {
   $mensaje = $e->getMessage();
 }
 
