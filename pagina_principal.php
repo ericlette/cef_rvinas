@@ -46,16 +46,16 @@ if(isset($_SESSION['dni'])) {
       ?>
       <h3 align="">Sistema informático</h3><br />
       <div class="row justify-content-md-center">
-        <div class="col-md-4 text-center" style="border:1px solid black; border-radius:30px; padding:10px;">
+        <div class="col-sm-6 col-md-4 text-center" style="border:1px solid black; border-radius:30px; padding:10px;">
           <div class="card">
             <div class="card-body">
               <h4 class="card-title"><b>Inscripción a materias</b></h4>
               <p class="card-text">Inscríbete a las materias que quieras <b>cursar</b> en el próximo cuatrimestre haciendo clic acá.</p>
-              <a href="./inscripcion_materias.php" class="btn btn-primary">Inscribirse</a>
+              <a href="./inscripcion_materias2.php" class="btn btn-primary">Inscribirse</a>
             </div>
           </div>
         </div>
-        <div class="col-md-4 text-center" style="border:1px solid black; border-radius:30px; padding:10px;">
+        <div class="col-sm-6 col-md-4 text-center" style="border:1px solid black; border-radius:30px; padding:10px;">
           <div class="card">
             <div class="card-body">
               <h4 class="card-title"><b>Inscripción a exámenes finales</b></h4>
@@ -64,7 +64,7 @@ if(isset($_SESSION['dni'])) {
             </div>
           </div>
         </div>
-        <div class="col-md-4 text-center" style="border:1px solid black; border-radius:30px;  padding:10px;">
+        <div class="col-sm-6 col-md-4 text-center" style="border:1px solid black; border-radius:30px;  padding:10px;">
           <div class="card">
             <div class="card-body">
               <h4 class="card-title"><b>Solicitud de certificados</b></h4>
@@ -73,7 +73,7 @@ if(isset($_SESSION['dni'])) {
             </div>
           </div>
         </div>
-        <div class="col-md-4 text-center" style="border:1px solid black; border-radius:30px;  padding:10px;">
+        <div class="col-sm-6 col-md-4 text-center" style="border:1px solid black; border-radius:30px;  padding:10px;">
           <div class="card">
             <div class="card-body">
               <h4 class="card-title"><b>Ver plan de estudios</b></h4>
@@ -82,7 +82,7 @@ if(isset($_SESSION['dni'])) {
             </div>
           </div>
         </div>
-        <div class="col-md-4 text-center" style="border:1px solid black; border-radius:30px;  padding:10px;">
+        <div class="col-sm-6 col-md-4 text-center" style="border:1px solid black; border-radius:30px;  padding:10px;">
           <div class="card">
             <div class="card-body">
               <h4 class="card-title"><b>Cambiar contraseña</b></h4>

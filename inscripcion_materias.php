@@ -3,28 +3,68 @@
 <head>
 <meta charset="utf-8">
 <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" >
 <title>Inscripcion a Materias</title>
 <style type="text/css">
-  .normal {
+  /*.normal {
     width: 1024px;
     border: 1px solid #000;
   }
   .normal th, .normal td {
     border: 1px solid #000;
-  }
+  }*/
 </style>
 </head>
 <body>
-  <table class="normal" summary="Tabla genérica">
-  	<tr>
-  		<td>NRO</td>
-  		<td>PROFESOR</td>
-  		<td>NOMBRE MATERIA </td>
-  		<td>AÑO</td>
-  		<td>FOMRATO</td>
-  		<td>REGIMEN </td>
-  		<td>INSCRIBIR</td>
-    </tr>
+	<nav style="background-color:#0D0C0C" class="navbar navbar-dark  fixed-top    navbar-toggleable-md ">
+
+  <button class="navbar-toggler navbar-toggler-right " type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" id="btn-menu" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+  <a class="navbar-brand" href="login_exitoso.php">
+    <span class="icon-brand35" ></span>
+    rofesorado CEFN5
+  </a>
+
+ <div class="collapse  navbar-collapse" id="menu">
+  <div class="navbar-nav">
+
+      <a class="nav-item nav-link" href="#">Inscripcion Materias</a>
+      <a class="nav-item nav-link" href="#">Inscripcion Final</a>
+      <a class="nav-item nav-link" href="#">Ver plan de estudios</a>
+      <a class="nav-item nav-link" href="#">Obtener crtificados</a>
+
+
+    </div>
+    </div>
+</nav>
+<div class="container">
+<br>
+<br>
+<br>
+
+	<table class="table">
+	  <thead class="thead-dark">
+		<tr>
+
+
+			 <th scope="col">#NRO</th>
+
+	      <th scope="col">NOMBRE MATERIA</th>
+	      <th scope="col">AÑO</th>
+	       <th scope="col">FORMATO</th>
+	      <th scope="col">REGIMEN</th>
+	      <th scope="col">INSCRIBIR</th>
+
+
+
+		</tr>
+	   </thead>
+		 <tbody>
 
     <?php
     $id_alumno = 1;
@@ -46,14 +86,13 @@
       $cadena = "";
       $cadena.="<tr>";
 
-      while( $datos = $sql->fetch(PDO::FETCH_ASSOC)){
+      while($datos = $sql->fetch(PDO::FETCH_ASSOC)){
       	$cadena.="<td>".$datos['id_catedra']."</td>
-      	 <td>".$datos['nombre_y_apellido']."</td>
       	 <td>".$datos['nombre']."</td>
       	 <td>".$datos['ano']."</td>
       	 <td>".$datos['formato']."</td>
       	 <td>".$datos['regimen_c']."</td>
-      	 <td><button onclick='inscribir(".$id_alumno.",".$datos['id_catedra'].")'>Aqui</button></td>";
+      	 <td><button class='btn btn-outline-primary' onclick='inscribir(".$id_alumno.",".$datos['id_catedra'].")'>Aqui</button></td>";
 
 
         $cadena.="</tr>";
@@ -67,7 +106,10 @@
     echo $cadena;
     ?>
 
-  </table>
+	</tbody>
+
+	</table>
+	</div>
 </body>
 
 <script type="text/javascript">
