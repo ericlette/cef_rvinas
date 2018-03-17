@@ -17,7 +17,7 @@
   }*/
 </style>
 </head>
-<body>
+<body style="background-color:#EDECEA;">
 	<nav style="background-color:#0D0C0C" class="navbar navbar-dark  fixed-top    navbar-toggleable-md ">
 
   <button class="navbar-toggler navbar-toggler-right " type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" id="btn-menu" aria-label="Toggle navigation">
@@ -25,9 +25,9 @@
     </button>
 
 
-  <a class="navbar-brand" href="login_exitoso.php">
+  <a class="navbar-brand" href="pagina_principal.php">
     <span class="icon-brand35" ></span>
-    rofesorado CEFN5
+    Profesorado CEFN5
   </a>
 
  <div class="collapse  navbar-collapse" id="menu">
@@ -47,7 +47,7 @@
 <br>
 <br>
 
-	<table class="table">
+	<table class="table" style="background-color:white;">
 	  <thead class="thead-dark">
 		<tr>
 
