@@ -84,7 +84,7 @@ if(isset($_SESSION['dni'])) {
               else {
                 echo '<h5 class="card-title"><b>Acta de regularidad</b></h5>';
                 echo '<p class="card-text">Puedes <b>ver, ingresar y/o modificar las notas y condiciones de regularidad</b> de los alumnos.</p>';
-                echo '<a href="#" class="btn btn-primary">Entrar</a>';
+                echo '<a href="./materias_profesor.php" class="btn btn-primary">Entrar</a>';
               }
               ?>
             </div>
