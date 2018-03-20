@@ -75,35 +75,57 @@ if(isset($_SESSION['dni'])) {
         <div class="col-sm-6 col-md-4 text-center" style="padding:10px;">
           <div class="card">
             <div class="card-body border border-dark rounded">
-              <h5 class="card-title"><b>Inscripción a materias</b></h5>
-              <p class="card-text">Inscríbete a las materias que quieras <b>cursar</b> en el próximo cuatrimestre haciendo clic acá.</p>
-              <a href="./inscripcion_materias.php" class="btn btn-primary">Inscribirse</a>
+              <?php
+              if($sesion_perfil == 'Alumno') {
+                echo '<h5 class="card-title"><b>Inscripción a materias</b></h5>';
+                echo '<p class="card-text">Inscríbete a las materias que quieras <b>cursar</b> en el próximo cuatrimestre haciendo clic acá.</p>';
+                echo '<a href="./inscripcion_materias.php" class="btn btn-primary">Inscribirse</a>';
+              }
+              else {
+                echo '<h5 class="card-title"><b>Acta de regularidad</b></h5>';
+                echo '<p class="card-text">Puedes <b>ver, ingresar y/o modificar las notas y condiciones de regularidad</b> de los alumnos.</p>';
+                echo '<a href="#" class="btn btn-primary">Entrar</a>';
+              }
+              ?>
             </div>
           </div>
         </div>
         <div class="col-sm-6 col-md-4 text-center" style="padding:10px;">
           <div class="card">
             <div class="card-body border border-dark rounded">
-              <h5 class="card-title"><b>Inscripción a exámenes finales</b></h5>
-              <p class="card-text">Inscríbete a las materias que quieras <b>rendir</b> en la próxima mesa de finales haciendo clic acá.</p>
-              <a href="#" class="btn btn-primary">Inscribirse</a>
+              <?php
+              if($sesion_perfil == 'Alumno') {
+                echo '<h5 class="card-title"><b>Inscripción a exámenes finales</b></h5>';
+                echo '<p class="card-text">Inscríbete a las materias que quieras <b>rendir</b> en la próxima mesa de finales haciendo clic acá.</p>';
+                echo '<a href="#" class="btn btn-primary">Inscribirse</a>';
+              }
+              else {
+                echo '<h5 class="card-title"><b>Acta de exámenes finales</b></h5>';
+                echo '<p class="card-text">Puedes <b>ver, ingresar y/o modificar las notas de exámenes finales</b> de los alumnos.</p>';
+                echo '<a href="#" class="btn btn-primary">Entrar</a>';
+              }
+              ?>
             </div>
           </div>
         </div>
-        <div class="col-sm-6 col-md-4 text-center" style="padding:10px;">
-          <div class="card">
-            <div class="card-body border border-dark rounded">
-              <h5 class="card-title"><b>Solicitud de certificados</b></h5>
-              <p class="card-text">Descargá tu <b>certificado de alumno regular</b> o tu <b>historial académico</b> haciendo clic acá.</p>
-              <a href="#" class="btn btn-primary">Descargar</a>
-            </div>
-          </div>
-        </div>
+        <?php
+        if($sesion_perfil == 'Alumno') {
+          echo '<div class="col-sm-6 col-md-4 text-center" style="padding:10px;">';
+          echo '<div class="card">';
+          echo '<div class="card-body border border-dark rounded">';
+          echo '<h5 class="card-title"><b>Solicitud de certificados</b></h5>';
+          echo '<p class="card-text">Descargá tu <b>certificado de alumno regular</b> o tu <b>historial académico</b> haciendo clic acá.</p>';
+          echo '<a href="#" class="btn btn-primary">Descargar</a>';
+          echo '</div>';
+          echo '</div>';
+          echo '</div>';
+        }
+        ?>
         <div class="col-sm-6 col-md-4 text-center" style="padding:10px;">
           <div class="card">
             <div class="card-body border border-dark rounded">
               <h5 class="card-title"><b>Ver plan de estudios</b></h5>
-              <p class="card-text">Podés ver tu plan de estudios haciendo clic acá.</p>
+              <p class="card-text">Podés ver el plan de estudios haciendo clic acá.</p>
               <a href="#" class="btn btn-primary">Ver plan de estudios</a>
             </div>
           </div>
